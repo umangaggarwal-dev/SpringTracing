@@ -1,11 +1,11 @@
-package org.umang.projects.kafkatracer.tracing.resttemplate;
+package com.github.umangaggarwal.springtracer.tracing.resttemplate;
 
+import com.github.umangaggarwal.springtracer.tracing.interceptor.TracingInterceptor;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
-import org.umang.projects.kafkatracer.tracing.interceptor.TracingInterceptor;
 
 import java.util.Collections;
 import java.util.List;

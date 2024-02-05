@@ -1,11 +1,11 @@
-package org.umang.projects.kafkatracer;
+package com.github.umangaggarwal.springtracer;
 
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
-import org.umang.projects.kafkatracer.tracing.filter.TracingFilter;
-import org.umang.projects.kafkatracer.tracing.resttemplate.CustomRestTemplate;
+import com.github.umangaggarwal.springtracer.tracing.filter.TracingFilter;
+import com.github.umangaggarwal.springtracer.tracing.resttemplate.CustomRestTemplate;
 
 @Configuration
 public class TracingConfig {
@@ -16,7 +16,6 @@ public class TracingConfig {
         filterFilterRegistrationBean.setFilter(new TracingFilter());
         filterFilterRegistrationBean.addUrlPatterns("/*");
         filterFilterRegistrationBean.setOrder(1);
-        System.out.println("Registered the tracing filter");
         return filterFilterRegistrationBean;
     }
 
