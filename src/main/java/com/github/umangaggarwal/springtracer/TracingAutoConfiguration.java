@@ -8,7 +8,7 @@ import com.github.umangaggarwal.springtracer.tracing.filter.TracingFilter;
 import com.github.umangaggarwal.springtracer.tracing.resttemplate.CustomRestTemplate;
 
 @Configuration
-public class TracingConfig {
+public class TracingAutoConfiguration {
 
     @Bean
     public FilterRegistrationBean<TracingFilter> tracingFilter() {
